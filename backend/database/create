@@ -1,0 +1,160 @@
+ CREATE DATABASE typologie;
+USE typologie;
+CREATE TABLE users(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    role INT,
+    firstname VARCHAR(255),
+    lastname VARCHAR(255),
+    mail TEXT,
+    address TEXT,
+    password TEXT,
+    date TIMESTAMP,
+    valid INT,
+    archived INT
+);
+CREATE TABLE typologie(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number INT,
+    name_fr TEXT,
+    name_en TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    caption_fr TEXT,
+    caption_en TEXT,
+    content1_fr TEXT,
+    content1_en TEXT,
+    content2_fr TEXT,
+    content2_en TEXT,
+    content3_fr TEXT,  
+    content3_en TEXT,  
+    shop_description_fr TEXT,
+    shop_description_en TEXT,
+    price DOUBLE,
+    fee_france DOUBLE,
+    fee_europe DOUBLE,
+    fee_world DOUBLE,
+    stock_fr INT,
+    stock_en INT,
+    release_date TEXT,
+    sticker TEXT,
+    shop_sticker TEXT,
+    cover TEXT,
+    back TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE expo(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number INT,
+    name_fr TEXT,
+    name_en TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    caption_fr TEXT,
+    caption_en TEXT,
+    cover TEXT,
+    back TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE videos(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number INT,
+    name_fr TEXT,
+    name_en TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    caption_fr TEXT,
+    caption_en TEXT,
+    cover TEXT,
+    back TEXT,
+    video TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE item(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number INT,
+    name_fr TEXT,
+    name_en TEXT,
+    type_fr TEXT,
+    type_en TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    tooltip1_fr TEXT,
+    tooltip1_en TEXT,
+    tooltip2_fr TEXT,
+    tooltip2_en TEXT,
+    caption_fr TEXT,
+    caption_en TEXT,
+    price DOUBLE,
+    fee_france DOUBLE,
+    fee_europe DOUBLE,
+    fee_world DOUBLE,
+    stock INT,
+    release_date TEXT,
+    sticker TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE table commands(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    user_information TEXT,
+    basket TEXT,
+    status TEXT,
+    transaction_id TEXT,
+    transaction TEXT,
+    command_number TEXT,
+    price DOUBLE,
+    fee DOUBLE,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE about(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    info_fr text,
+    info_en text,
+    contact_fr text,
+    contact_en text,
+    credits_fr text,
+    credits_en text,
+    small text,
+    medium text,
+    large text,
+    archived INT,
+    date TIMESTAMP
+);
+CREATE TABLE new(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    title_fr TEXT,
+    title_en TEXT,
+    ligne1_fr TEXT,
+    ligne1_en TEXT,
+    content_fr TEXT,
+    content_en TEXT,
+    banner_fr TEXT,
+    banner_en TEXT,
+    bannerLink_fr TEXT,
+    bannerLink_en TEXT,
+    printBanner TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE files(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    table_name TEXT,
+    item_id INT,
+    ordered INT,
+    filename TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+CREATE TABLE once(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    keyvalue TEXT,
+    data TEXT
+);
+INSERT INTO once (keyvalue, data) VALUES ('navbar', '{\"en\":{},\"fr\":{}}');
+INSERT INTO once (keyvalue, data) VALUES ('footer', '{\"en\":{},\"fr\":{}}');
+INSERT INTO about (archived) VALUES (0);
+INSERT INTO users (firstname, lastname, mail, address, password, role, valid, archived) VALUES('admin', 'admin','admin', '', '1234', 1, 1, 0);

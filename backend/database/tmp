@@ -1,0 +1,5 @@
+USE typologie;
+ALTER TABLE expos DROP COLUMN image;
+ALTER TABLE expos ADD COLUMN cover TEXT;
+ALTER TABLE expos ADD COLUMN back TEXT;
+ALTER TABLE expos ADD COLUMN numero_id INT;

@@ -1,0 +1,5 @@
+use typologie;
+
+ALTER TABLE typologie ADD COLUMN printBook TEXT;
+ALTER TABLE typologie ADD COLUMN shop_width INT;
+ALTER TABLE item ADD COLUMN shop_width INT;

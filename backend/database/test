@@ -1,0 +1,7 @@
+CREATE DATABASE main;
+USE main;
+CREATE TABLE test(
+    id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    test VARCHAR(255)
+);
+INSERT INTO test (test) VALUES ("success");

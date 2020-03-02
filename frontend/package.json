@@ -1,0 +1,50 @@
+{
+  "name": "typologie",
+  "version": "1.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000/",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "braintree-web": "^2.32.1",
+    "env-cmd": "^8.0.2",
+    "express-http-proxy": "^1.4.0",
+    "paypal-rest-sdk": "^1.8.1",
+    "react": "^16.7.0",
+    "react-async-script-loader": "^0.3.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.7.0",
+    "react-over-scroll": "^2.0.0",
+    "react-paypal-express-checkout": "^1.0.5",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.3",
+    "react-scroll": "^1.7.10",
+    "react-scroll-into-view": "^1.5.0",
+    "react-slick": "^0.25.2",
+    "redux": "^4.0.1",
+    "scroll-into-view-if-needed": "^2.2.20",
+    "smooth-scroll-into-view-if-needed": "^1.1.23",
+    "superagent": "^4.0.0-beta.5",
+    "video-react": "^0.13.2"
+  },
+  "scripts": {
+    "start": "env-cmd ../.env-dev  react-scripts start",
+    "build": "env-cmd ../.env-dev react-scripts build",
+    "build:prod": "env-cmd ../.env-prod react-scripts build",
+    "build:docker": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "export $(cat ../.env-prod | xargs) && node server_front.js",
+    "prod": "npm run build:prod && export $(cat ../.env-prod | xargs) && nohup node server_front.js &",
+    "killOld": "pkill -f 'node server_front.js'",
+    "kubernetes": "node main.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

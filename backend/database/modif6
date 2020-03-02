@@ -1,0 +1,29 @@
+use typologie;
+
+CREATE TABLE pop_up(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    title_fr TEXT,
+    title_en TEXT,
+    book_title_fr TEXT,
+    book_title_en TEXT,
+    book_link TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    cover TEXT,
+    back TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+
+CREATE TABLE banner(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    caption_fr TEXT,
+    caption_en TEXT,
+    link TEXT,
+    printBanner TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+
+ALTER TABLE typologie ADD COLUMN discount_caption_fr TEXT;
+ALTER TABLE typologie ADD COLUMN discount_caption_en TEXT;

@@ -1,0 +1,23 @@
+use typologie;
+
+CREATE TABLE video(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    number INT,
+    name_fr TEXT,
+    name_en TEXT,
+    description_fr TEXT,
+    description_en TEXT,
+    caption_fr TEXT,
+    caption_en TEXT,
+    cover TEXT,
+    back TEXT,
+    video TEXT,
+    date TIMESTAMP,
+    archived INT
+);
+
+ALTER TABLE typologie ADD COLUMN release_date TEXT;
+
+ALTER TABLE item ADD COLUMN release_date TEXT;
+
+ALTER TABLE video ADD COLUMN poster TEXT;

@@ -1,0 +1,11 @@
+use typologie;
+CREATE table images (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    table_name TEXT,
+    item_id INT,
+    ordered INT,
+    small TEXT,
+    medium TEXT,
+    large TEXT,
+    archived INT
+);

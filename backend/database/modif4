@@ -1,0 +1,6 @@
+USE typologie;
+ALTER TABLE typologie ADD COLUMN tooltip_color TEXT;
+ALTER TABLE typologie ADD COLUMN tooltip1_fr TEXT;
+ALTER TABLE typologie ADD COLUMN tooltip1_en TEXT;
+ALTER TABLE typologie ADD COLUMN tooltip2_fr TEXT;
+ALTER TABLE typologie ADD COLUMN tooltip2_en TEXT;
